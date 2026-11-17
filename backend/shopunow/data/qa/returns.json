@@ -1,0 +1,62 @@
+[
+  {
+    "id": "returns-0",
+    "category": "returns",
+    "doc": "Q: What is the return window for most products?\nA: Most products can be returned within 7 days of delivery, except final-sale items which are marked as non-returnable on the product page."
+  },
+  {
+    "id": "returns-1",
+    "category": "returns",
+    "doc": "Q: How do I initiate a return?\nA: Go to \"My Orders > Return Item\", select the reason, and choose a pickup slot; a prepaid return label isn't needed as pickup is doorstep."
+  },
+  {
+    "id": "returns-2",
+    "category": "returns",
+    "doc": "Q: Can I exchange a product for a different size instead of returning it?\nA: Yes, select \"Exchange\" instead of \"Return\" on the order page, subject to stock availability of the new size."
+  },
+  {
+    "id": "returns-3",
+    "category": "returns",
+    "doc": "Q: When will I get my refund after a return?\nA: Refunds are processed within 5-7 business days after the returned item passes quality inspection at our warehouse."
+  },
+  {
+    "id": "returns-4",
+    "category": "returns",
+    "doc": "Q: Are all products eligible for return?\nA: Most products are eligible except innerwear, personal care items, and products explicitly marked \"non-returnable\" on the product page."
+  },
+  {
+    "id": "returns-5",
+    "category": "returns",
+    "doc": "Q: Do I need the original packaging to return an item?\nA: Yes, items should be returned with original tags, packaging, and accessories intact for the return to be accepted."
+  },
+  {
+    "id": "returns-6",
+    "category": "returns",
+    "doc": "Q: Can I return a product if I just don't like it?\nA: Yes, \"change of mind\" returns are accepted within the standard return window as long as the item is unused and in original condition."
+  },
+  {
+    "id": "returns-7",
+    "category": "returns",
+    "doc": "Q: What happens if my returned item fails quality inspection?\nA: If the item doesn't meet return conditions (e.g., used, damaged, missing parts), it will be shipped back to you instead of being refunded."
+  },
+  {
+    "id": "returns-8",
+    "category": "returns",
+    "doc": "Q: Can I return only part of a multi-item order?\nA: Yes, you can select specific items from an order to return; the rest of the order remains unaffected."
+  },
+  {
+    "id": "returns-9",
+    "category": "returns",
+    "doc": "Q: How long do I have to exchange a product?\nA: Exchanges follow the same window as returns — typically 7 days from delivery, unless stated otherwise on the product page."
+  },
+  {
+    "id": "returns-10",
+    "category": "returns",
+    "doc": "Q: Will I get a refund to my original payment method or store credit?\nA: Refunds are issued to your original payment method by default; store credit is offered as a faster alternative on request."
+  },
+  {
+    "id": "returns-11",
+    "category": "returns",
+    "doc": "Q: Can I return a gifted item without the original buyer?\nA: Yes, gifted items can be returned using the order ID shared by the gifter; refunds for gifted items are issued as store credit."
+  }
+]

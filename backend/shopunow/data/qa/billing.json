@@ -1,0 +1,62 @@
+[
+  {
+    "id": "billing-0",
+    "category": "billing",
+    "doc": "Q: I was charged twice for the same order, what should I do?\nA: Duplicate charges are usually auto-reversed within 5-7 business days; if not, contact billing support with your order ID for a manual refund."
+  },
+  {
+    "id": "billing-1",
+    "category": "billing",
+    "doc": "Q: How long does a refund take to process?\nA: Refunds typically take 5-7 business days to reflect, depending on your bank or payment provider."
+  },
+  {
+    "id": "billing-2",
+    "category": "billing",
+    "doc": "Q: What payment methods does ShopUNow accept?\nA: We accept credit/debit cards, UPI, net banking, and popular digital wallets at checkout."
+  },
+  {
+    "id": "billing-3",
+    "category": "billing",
+    "doc": "Q: Why was my payment declined?\nA: Payments can decline due to insufficient funds, bank-side restrictions, or incorrect card details; please retry or try an alternate payment method."
+  },
+  {
+    "id": "billing-4",
+    "category": "billing",
+    "doc": "Q: How do I get a copy of my invoice?\nA: Invoices are available under \"My Orders > Order Details > Download Invoice\" in your account, or can be emailed on request."
+  },
+  {
+    "id": "billing-5",
+    "category": "billing",
+    "doc": "Q: I was overcharged compared to the listed price, can I get the difference refunded?\nA: Yes, please share the order ID and a screenshot of the listed price; verified overcharges are refunded within 3-5 business days."
+  },
+  {
+    "id": "billing-6",
+    "category": "billing",
+    "doc": "Q: Can I change my payment method after placing an order?\nA: Payment methods cannot be changed after an order is placed, but you can cancel the order and reorder with your preferred method if it hasn't shipped."
+  },
+  {
+    "id": "billing-7",
+    "category": "billing",
+    "doc": "Q: Do you store my card details?\nA: We don't store raw card numbers; payments are processed via PCI-compliant gateways using tokenized card details."
+  },
+  {
+    "id": "billing-8",
+    "category": "billing",
+    "doc": "Q: How do I apply a discount coupon that didn't work at checkout?\nA: Check the coupon's validity and minimum order value; if it should have applied, contact billing support with the coupon code and order ID."
+  },
+  {
+    "id": "billing-9",
+    "category": "billing",
+    "doc": "Q: Can I get a GST/tax invoice for my purchase?\nA: Yes, GST invoices are automatically generated for eligible orders and can be downloaded from \"My Orders\"."
+  },
+  {
+    "id": "billing-10",
+    "category": "billing",
+    "doc": "Q: My refund amount doesn't match what I paid, why?\nA: This can happen if a partial item was returned or a coupon discount was deducted; the order summary breaks down the exact refundable amount."
+  },
+  {
+    "id": "billing-11",
+    "category": "billing",
+    "doc": "Q: How do I set up an EMI payment option?\nA: EMI is available on select cards and order values above the EMI threshold; eligible options are shown automatically at checkout."
+  }
+]

@@ -1,0 +1,62 @@
+[
+  {
+    "id": "hr-0",
+    "category": "hr",
+    "doc": "Q: How do I apply for paid time off (PTO)?\nA: You can submit a PTO request through the HR portal under \"Time Off\" at least 3 business days in advance. Your manager will approve or decline it within 2 business days."
+  },
+  {
+    "id": "hr-1",
+    "category": "hr",
+    "doc": "Q: When is the monthly payroll processed?\nA: Payroll is processed on the last working day of each month and typically reflects in your bank account within 1-2 business days."
+  },
+  {
+    "id": "hr-2",
+    "category": "hr",
+    "doc": "Q: How can I access my payslips?\nA: Payslips are available in the HR portal under \"Payroll > Payslips\" and are uploaded by the 5th of each month."
+  },
+  {
+    "id": "hr-3",
+    "category": "hr",
+    "doc": "Q: What is the process for internal job transfers?\nA: Employees interested in transferring to another department should apply through the Internal Job Postings board and inform their current manager after being shortlisted."
+  },
+  {
+    "id": "hr-4",
+    "category": "hr",
+    "doc": "Q: Who do I contact to update my bank account or personal details?\nA: You can update your bank account and personal details yourself in the HR portal under \"My Profile\", or email hr-support@shopunow.com for assistance."
+  },
+  {
+    "id": "hr-5",
+    "category": "hr",
+    "doc": "Q: How many sick leaves am I entitled to per year?\nA: Full-time employees are entitled to 10 paid sick leaves per calendar year, which do not carry over to the next year."
+  },
+  {
+    "id": "hr-6",
+    "category": "hr",
+    "doc": "Q: When are performance reviews conducted?\nA: Performance reviews are conducted twice a year, in April and October, followed by a calibration meeting with your manager."
+  },
+  {
+    "id": "hr-7",
+    "category": "hr",
+    "doc": "Q: How do I report a workplace grievance?\nA: Grievances can be reported confidentially through the HR portal's \"Grievance Redressal\" form or by emailing hr-grievance@shopunow.com."
+  },
+  {
+    "id": "hr-8",
+    "category": "hr",
+    "doc": "Q: What is the notice period for resignation?\nA: The standard notice period is 60 days for confirmed employees and 30 days during the probation period."
+  },
+  {
+    "id": "hr-9",
+    "category": "hr",
+    "doc": "Q: Can I carry forward unused PTO to the next year?\nA: Up to 5 unused PTO days can be carried forward to the next calendar year; anything beyond that is forfeited."
+  },
+  {
+    "id": "hr-10",
+    "category": "hr",
+    "doc": "Q: How do I enroll in the company's health insurance plan?\nA: New employees are auto-enrolled in the group health insurance plan within 30 days of joining; dependents can be added via the HR portal."
+  },
+  {
+    "id": "hr-11",
+    "category": "hr",
+    "doc": "Q: What is the maternity/paternity leave policy?\nA: ShopUNow offers 26 weeks of paid maternity leave and 2 weeks of paid paternity leave, in line with statutory requirements."
+  }
+]

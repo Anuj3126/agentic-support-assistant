@@ -1,0 +1,62 @@
+[
+  {
+    "id": "it_support-0",
+    "category": "it_support",
+    "doc": "Q: My VPN keeps disconnecting, what should I do?\nA: Try reconnecting via the GlobalProtect client; if the issue persists, raise a ticket under \"Network > VPN\" and IT will investigate within 4 business hours."
+  },
+  {
+    "id": "it_support-1",
+    "category": "it_support",
+    "doc": "Q: How do I reset my company email password?\nA: Go to the self-service portal at password.shopunow.com and follow the OTP-based reset flow; this works for email, VPN, and intranet logins."
+  },
+  {
+    "id": "it_support-2",
+    "category": "it_support",
+    "doc": "Q: My laptop won't turn on, who do I contact?\nA: Raise a hardware ticket under \"Hardware > Laptop Issue\" on the IT portal; a technician will reach out within the same business day for on-site or courier replacement."
+  },
+  {
+    "id": "it_support-3",
+    "category": "it_support",
+    "doc": "Q: How do I request a new software license?\nA: Submit a request via the IT portal under \"Software > License Request\", specifying the software name and business justification for manager approval."
+  },
+  {
+    "id": "it_support-4",
+    "category": "it_support",
+    "doc": "Q: I'm locked out of my account after multiple failed logins, what now?\nA: Accounts auto-unlock after 30 minutes, or you can raise an urgent ticket under \"Access > Account Lockout\" for immediate unlocking."
+  },
+  {
+    "id": "it_support-5",
+    "category": "it_support",
+    "doc": "Q: How do I set up email on my personal phone?\nA: Install the Outlook app, use your shopunow.com email and password, and approve the MFA prompt sent to your registered device."
+  },
+  {
+    "id": "it_support-6",
+    "category": "it_support",
+    "doc": "Q: What do I do if I suspect a phishing email?\nA: Do not click any links; forward the email to phishing@shopunow.com and delete it. IT Security will investigate and notify if any action is needed."
+  },
+  {
+    "id": "it_support-7",
+    "category": "it_support",
+    "doc": "Q: How do I get access to a shared drive or folder?\nA: Submit an access request via the IT portal under \"Access > Shared Drive\", tagging your manager as the approver."
+  },
+  {
+    "id": "it_support-8",
+    "category": "it_support",
+    "doc": "Q: My video conferencing app is not working during a call, who can help urgently?\nA: Call the IT helpdesk hotline at extension 4455 for urgent live-meeting support in addition to raising a ticket."
+  },
+  {
+    "id": "it_support-9",
+    "category": "it_support",
+    "doc": "Q: How often are laptops refreshed/replaced?\nA: Laptops are refreshed every 3 years as part of the standard hardware lifecycle, or sooner if there's a verified hardware fault."
+  },
+  {
+    "id": "it_support-10",
+    "category": "it_support",
+    "doc": "Q: Can I install personal software on my company laptop?\nA: Only software approved on the IT catalog can be installed; unapproved software requires a one-time exception request via the IT portal."
+  },
+  {
+    "id": "it_support-11",
+    "category": "it_support",
+    "doc": "Q: How do I connect to the office printer?\nA: Install the printer driver from \\\\printserver\\shopunow and select the printer nearest your floor; contact IT if it doesn't appear in the directory."
+  }
+]

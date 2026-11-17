@@ -1,0 +1,62 @@
+[
+  {
+    "id": "shipping-0",
+    "category": "shipping",
+    "doc": "Q: How do I track my order?\nA: You can track your order in real time under \"My Orders > Track Order\" using the tracking ID emailed to you at dispatch."
+  },
+  {
+    "id": "shipping-1",
+    "category": "shipping",
+    "doc": "Q: My order is delayed, what should I do?\nA: Delays are usually shown with an updated ETA on the tracking page; if it's overdue by more than 2 days, contact shipping support with your order ID."
+  },
+  {
+    "id": "shipping-2",
+    "category": "shipping",
+    "doc": "Q: I received a damaged item, what now?\nA: Please report it within 48 hours of delivery via \"My Orders > Report Issue\" with photos, and we'll arrange a free replacement or refund."
+  },
+  {
+    "id": "shipping-3",
+    "category": "shipping",
+    "doc": "Q: Can I change my delivery address after placing the order?\nA: Address changes are possible only before the order is dispatched; please contact support immediately after placing the order."
+  },
+  {
+    "id": "shipping-4",
+    "category": "shipping",
+    "doc": "Q: How do I schedule a return pickup?\nA: Initiate a return from \"My Orders > Return Item\" and select a pickup slot; our courier partner will collect the item from your address."
+  },
+  {
+    "id": "shipping-5",
+    "category": "shipping",
+    "doc": "Q: Do you offer international shipping?\nA: Yes, we ship to select international destinations; availability is shown at checkout based on your delivery address."
+  },
+  {
+    "id": "shipping-6",
+    "category": "shipping",
+    "doc": "Q: What should I do if my order shows \"delivered\" but I haven't received it?\nA: Please check with neighbors/building security first, then report it within 24 hours via \"My Orders > Report Issue\" for investigation."
+  },
+  {
+    "id": "shipping-7",
+    "category": "shipping",
+    "doc": "Q: Can I choose a specific delivery time slot?\nA: Time-slot delivery is available in select cities for an additional fee, shown as an option at checkout."
+  },
+  {
+    "id": "shipping-8",
+    "category": "shipping",
+    "doc": "Q: How much does standard shipping cost?\nA: Standard shipping is free above a minimum order value; otherwise a flat shipping fee applies, shown at checkout."
+  },
+  {
+    "id": "shipping-9",
+    "category": "shipping",
+    "doc": "Q: My package was returned to sender, why did that happen?\nA: This usually happens due to an incorrect address, unavailability during delivery attempts, or refusal at the door; our team will contact you to reschedule."
+  },
+  {
+    "id": "shipping-10",
+    "category": "shipping",
+    "doc": "Q: Can I reschedule a delivery?\nA: Yes, use \"My Orders > Reschedule Delivery\" to pick a new delivery date before the next delivery attempt."
+  },
+  {
+    "id": "shipping-11",
+    "category": "shipping",
+    "doc": "Q: How many delivery attempts are made before an order is returned?\nA: Our courier partners make up to 3 delivery attempts before returning the order to the warehouse."
+  }
+]

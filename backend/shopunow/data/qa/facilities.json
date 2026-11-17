@@ -1,0 +1,62 @@
+[
+  {
+    "id": "facilities-0",
+    "category": "facilities",
+    "doc": "Q: How do I get a replacement access card?\nA: Raise a request on the Facilities portal under \"Access Card > Replacement\"; a temporary card will be issued same-day while the new one is printed."
+  },
+  {
+    "id": "facilities-1",
+    "category": "facilities",
+    "doc": "Q: Who do I contact for a broken chair or desk?\nA: Log a maintenance request on the Facilities portal under \"Maintenance > Furniture\" and a technician will address it within 2 business days."
+  },
+  {
+    "id": "facilities-2",
+    "category": "facilities",
+    "doc": "Q: How do I book a meeting room?\nA: Meeting rooms can be booked through the Outlook Room Finder or the Facilities booking app, up to 2 weeks in advance."
+  },
+  {
+    "id": "facilities-3",
+    "category": "facilities",
+    "doc": "Q: How do I request additional office supplies like stationery?\nA: Submit a request via the Facilities portal under \"Supplies > Stationery Request\"; supplies are typically delivered to your desk within 3 business days."
+  },
+  {
+    "id": "facilities-4",
+    "category": "facilities",
+    "doc": "Q: What are the office parking policies?\nA: Parking passes are allotted on a first-come basis through the Facilities portal and are valid for 6 months, renewable before expiry."
+  },
+  {
+    "id": "facilities-5",
+    "category": "facilities",
+    "doc": "Q: Who do I report an AC or temperature issue to?\nA: Report temperature issues through the Facilities portal under \"Maintenance > HVAC\" or call the front desk directly for urgent cases."
+  },
+  {
+    "id": "facilities-6",
+    "category": "facilities",
+    "doc": "Q: How do I arrange a desk move or workstation change?\nA: Submit a \"Workstation Change\" request on the Facilities portal at least 5 business days in advance, specifying the reason and preferred location."
+  },
+  {
+    "id": "facilities-7",
+    "category": "facilities",
+    "doc": "Q: What is the process for visitor access?\nA: Register your visitor at least 24 hours in advance through the Visitor Management System; they must carry a valid photo ID at the gate."
+  },
+  {
+    "id": "facilities-8",
+    "category": "facilities",
+    "doc": "Q: Is there a cafeteria or pantry on-site, and what are its hours?\nA: Yes, the cafeteria operates from 8 AM to 8 PM on weekdays, with the pantry available 24/7 for tea, coffee, and snacks."
+  },
+  {
+    "id": "facilities-9",
+    "category": "facilities",
+    "doc": "Q: How do I report a cleanliness or housekeeping issue?\nA: Raise a request under \"Housekeeping\" on the Facilities portal, or inform the floor housekeeping staff directly for immediate issues."
+  },
+  {
+    "id": "facilities-10",
+    "category": "facilities",
+    "doc": "Q: Can I book a locker for personal belongings?\nA: Lockers can be requested through the Facilities portal under \"Locker Allocation\"; allocation is subject to availability per floor."
+  },
+  {
+    "id": "facilities-11",
+    "category": "facilities",
+    "doc": "Q: What do I do in case of a fire drill or emergency?\nA: Follow the evacuation route posted on your floor to the nearest assembly point and await further instructions from the floor warden."
+  }
+]

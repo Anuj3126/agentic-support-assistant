@@ -1,0 +1,21 @@
+# secrets
+.env
+backend/.env
+
+# virtual environment
+.venv/
+venv/
+
+# python
+__pycache__/
+*.pyc
+*.egg-info/
+.pytest_cache/
+
+# project runtime artifacts (regenerable)
+backend/shopunow/chroma_db/
+backend/shopunow/checkpoints.sqlite
+backend/shopunow/escalations.jsonl
+
+# os
+.DS_Store
