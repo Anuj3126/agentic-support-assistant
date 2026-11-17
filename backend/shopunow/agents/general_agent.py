@@ -1,10 +1,14 @@
-"""Handles two kinds of queries that don't belong to a specific department:
+"""Handles queries that don't belong to a specific department:
 
 1. Questions about ShopUNow itself — what it sells, store hours, how it operates. ShopUNow
    is a fictional company for this project, so a real web search for "ShopUNow" wouldn't
    turn up anything real — instead, those basics are just given to the agent directly as a
    company profile in its prompt, the same way a real support agent would already know them.
-2. Broader retail/shopping questions that aren't about ShopUNow specifically, but that a
+2. Product stock questions ("do you have X in stock", "how many Y do you have left") — these
+   don't need anyone logged in (inventory isn't tied to a customer or employee), so the agent
+   gets a narrow read-only SQL tool scoped to just the inventory table, same guard mechanism
+   as every other department's SQL tool.
+3. Broader retail/shopping questions that aren't about ShopUNow specifically, but that a
    helpful retail assistant could reasonably weigh in on (product care, gift ideas, general
    shopping guidance) — these genuinely benefit from the real internet, so the agent is given
    the web_search tool and decides for itself when it actually needs to use it.
@@ -20,7 +24,10 @@ from langchain_google_genai import ChatGoogleGenerativeAI
 from shopunow.config import settings
 from shopunow.guardrails.conduct_policy import CONDUCT_POLICY
 from shopunow.state import SupportState
+from shopunow.tools.sql_tool import make_sql_tool
 from shopunow.tools.web_search_tool import to_docs, web_search
+
+inventory_tool = make_sql_tool("general")
 
 COMPANY_PROFILE = """ShopUNow is a retail company selling clothing, DIY (do it yourself)
 supplies, books, and toys, both online and through a small network of physical stores across
@@ -41,11 +48,14 @@ during major shopping periods, and has a free mobile app (iOS and Android) with 
 SYSTEM_PROMPT = f"""{CONDUCT_POLICY}
 
 You are ShopUNow's general support agent. You step in for questions that don't belong to a
-specific department (HR, IT, Facilities, Billing, Shipping, Returns), which come in two kinds:
+specific department (HR, IT, Facilities, Billing, Shipping, Returns), which come in three kinds:
 
 1. Questions about ShopUNow itself. You already know the basics — they're given to you below
    as a company profile. Answer directly from that; there's no need to search for it.
-2. Broader retail or shopping questions that aren't about ShopUNow specifically (product care,
+2. Product stock questions ("do you have X in stock", "how many Y are left") — use the
+   inventory lookup tool for these instead of guessing. It only covers items, categories,
+   prices, and stock counts; it has nothing to do with any specific customer's order.
+3. Broader retail or shopping questions that aren't about ShopUNow specifically (product care,
    gift ideas, general shopping guidance). For these, use the web_search tool if your own
    knowledge isn't enough to give a good answer.
 
@@ -68,7 +78,8 @@ def general_node(state: SupportState) -> dict:
     query = state["messages"][-1].content
     llm = ChatGoogleGenerativeAI(model=settings.chat_model, google_api_key=settings.google_api_key)
     messages = [SystemMessage(SYSTEM_PROMPT), *history, HumanMessage(query)]
-    tool_llm = llm.bind_tools([web_search])
+    tools = [web_search, inventory_tool]
+    tool_llm = llm.bind_tools(tools)
 
     # A bounded loop, not a single round — tools must stay bound on every call, not just the
     # first, or a model that wants a second search after seeing the first result gets cut off
@@ -79,10 +90,17 @@ def general_node(state: SupportState) -> dict:
     while response.tool_calls and rounds < MAX_TOOL_ROUNDS:
         messages.append(response)
         for call in response.tool_calls:
-            results = web_search.invoke(call["args"])
-            docs.extend(to_docs(results, department="general"))
-            used_web_search = True
-            messages.append(ToolMessage(content=json.dumps(results), tool_call_id=call["id"]))
+            if call["name"] == web_search.name:
+                results = web_search.invoke(call["args"])
+                docs.extend(to_docs(results, department="general"))
+                used_web_search = True
+                messages.append(ToolMessage(content=json.dumps(results), tool_call_id=call["id"]))
+            else:
+                # inventory_tool: execute_safe_select raises SQLInjectionDetected on anything
+                # unsafe — deliberately not caught here, so it propagates to the shared
+                # guardrail wrapper in graph/build.py, same as every other department's tool.
+                result = inventory_tool.invoke(call["args"])
+                messages.append(ToolMessage(content=json.dumps(result), tool_call_id=call["id"]))
         response = tool_llm.invoke(messages)
         rounds += 1
 

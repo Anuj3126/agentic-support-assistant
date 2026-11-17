@@ -87,6 +87,9 @@ DEPARTMENT_TABLES = {
     "returns": {"customers", "orders", "order_items", "inventory"},
     "hr": {"employees", "leave_balances"},
     "it_support": {"employees", "it_tickets"},
+    # General has no account/identity concept, so it only gets the one table that isn't tied
+    # to a customer or employee — product stock lookups don't need anyone logged in.
+    "general": {"inventory"},
 }
 
 # Which table a department's identity check resolves against — "customer" departments look
