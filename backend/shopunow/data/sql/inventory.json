@@ -1,0 +1,128 @@
+[
+  {
+    "item_id": 1,
+    "name": "Classic Denim Jacket",
+    "category": "clothing",
+    "price": 2499.0,
+    "stock_qty": 19
+  },
+  {
+    "item_id": 2,
+    "name": "Cotton Crew T-Shirt",
+    "category": "clothing",
+    "price": 499.0,
+    "stock_qty": 8
+  },
+  {
+    "item_id": 3,
+    "name": "Slim Fit Chinos",
+    "category": "clothing",
+    "price": 1299.0,
+    "stock_qty": 40
+  },
+  {
+    "item_id": 4,
+    "name": "Wool Blend Sweater",
+    "category": "clothing",
+    "price": 1899.0,
+    "stock_qty": 36
+  },
+  {
+    "item_id": 5,
+    "name": "Rain Shell Jacket",
+    "category": "clothing",
+    "price": 2199.0,
+    "stock_qty": 33
+  },
+  {
+    "item_id": 6,
+    "name": "Cordless Drill Kit",
+    "category": "diy",
+    "price": 3499.0,
+    "stock_qty": 22
+  },
+  {
+    "item_id": 7,
+    "name": "Paint Roller Set",
+    "category": "diy",
+    "price": 599.0,
+    "stock_qty": 18
+  },
+  {
+    "item_id": 8,
+    "name": "Garden Tool Set",
+    "category": "diy",
+    "price": 1199.0,
+    "stock_qty": 74
+  },
+  {
+    "item_id": 9,
+    "name": "LED Work Light",
+    "category": "diy",
+    "price": 899.0,
+    "stock_qty": 16
+  },
+  {
+    "item_id": 10,
+    "name": "The Midnight Library (Novel)",
+    "category": "books",
+    "price": 399.0,
+    "stock_qty": 80
+  },
+  {
+    "item_id": 11,
+    "name": "Atomic Habits",
+    "category": "books",
+    "price": 449.0,
+    "stock_qty": 59
+  },
+  {
+    "item_id": 12,
+    "name": "Kids' Picture Atlas",
+    "category": "books",
+    "price": 349.0,
+    "stock_qty": 9
+  },
+  {
+    "item_id": 13,
+    "name": "DIY Home Repair Guide",
+    "category": "books",
+    "price": 499.0,
+    "stock_qty": 8
+  },
+  {
+    "item_id": 14,
+    "name": "Wooden Building Blocks",
+    "category": "toys",
+    "price": 799.0,
+    "stock_qty": 16
+  },
+  {
+    "item_id": 15,
+    "name": "Remote Control Car",
+    "category": "toys",
+    "price": 1499.0,
+    "stock_qty": 32
+  },
+  {
+    "item_id": 16,
+    "name": "Board Game: Strategy Quest",
+    "category": "toys",
+    "price": 999.0,
+    "stock_qty": 34
+  },
+  {
+    "item_id": 17,
+    "name": "Plush Teddy Bear",
+    "category": "toys",
+    "price": 599.0,
+    "stock_qty": 69
+  },
+  {
+    "item_id": 18,
+    "name": "1000-Piece Puzzle",
+    "category": "toys",
+    "price": 649.0,
+    "stock_qty": 8
+  }
+]

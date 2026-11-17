@@ -1,20 +1,7 @@
 from langchain_core.messages import AIMessage, HumanMessage
 
 from shopunow.agents import general_agent
-
-
-class _FakeToolCallingLLM:
-    """Returns each response in order — one per .invoke() call — simulating the model first
-    deciding to call a tool, then producing a final answer once given the tool's result."""
-
-    def __init__(self, responses):
-        self._responses = iter(responses)
-
-    def bind_tools(self, _tools):
-        return self
-
-    def invoke(self, _messages):
-        return next(self._responses)
+from tests.conftest import FakeToolCallingLLM as _FakeToolCallingLLM
 
 
 class _FakeWebSearchTool:

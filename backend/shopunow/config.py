@@ -6,6 +6,7 @@ PACKAGE_DIR = Path(__file__).resolve().parent
 BACKEND_DIR = PACKAGE_DIR.parent
 DATA_DIR = PACKAGE_DIR / "data"
 CHROMA_DIR = PACKAGE_DIR / "chroma_db"
+BUSINESS_DB_PATH = PACKAGE_DIR / "shopunow.sqlite"
 
 
 class Settings(BaseSettings):

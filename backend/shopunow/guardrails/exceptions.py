@@ -12,3 +12,7 @@ class PromptInjectionDetected(GuardrailViolation):
 
 class ComplianceViolation(GuardrailViolation):
     """Raised when a draft response fails the conduct/compliance check."""
+
+
+class SQLInjectionDetected(GuardrailViolation):
+    """Raised when generated SQL fails the safety guard (not a single whitelisted SELECT)."""

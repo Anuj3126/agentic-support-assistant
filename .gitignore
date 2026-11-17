@@ -12,9 +12,10 @@ __pycache__/
 *.egg-info/
 .pytest_cache/
 
-# project runtime artifacts (regenerable)
+# project runtime artifacts (regenerable from committed json data via init_db.py / vectorstore.py)
 backend/shopunow/chroma_db/
 backend/shopunow/checkpoints.sqlite
+backend/shopunow/shopunow.sqlite
 backend/shopunow/escalations.jsonl
 
 # os
