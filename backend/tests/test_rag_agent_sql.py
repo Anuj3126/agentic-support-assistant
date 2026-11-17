@@ -11,6 +11,8 @@ from tests.conftest import FakeToolCallingLLM
 
 
 class _FakeSQLTool:
+    name = "query_returns_database"
+
     def __init__(self, result=None, error=None):
         self._result = result
         self._error = error

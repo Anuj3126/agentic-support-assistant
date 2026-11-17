@@ -1,0 +1,146 @@
+[
+  {
+    "leave_balance_id": 3001,
+    "employee_id": 1,
+    "leave_type": "PTO",
+    "balance_days": 1.5
+  },
+  {
+    "leave_balance_id": 3002,
+    "employee_id": 1,
+    "leave_type": "sick",
+    "balance_days": 16.6
+  },
+  {
+    "leave_balance_id": 3003,
+    "employee_id": 1,
+    "leave_type": "casual",
+    "balance_days": 11.2
+  },
+  {
+    "leave_balance_id": 3004,
+    "employee_id": 2,
+    "leave_type": "PTO",
+    "balance_days": 15.5
+  },
+  {
+    "leave_balance_id": 3005,
+    "employee_id": 2,
+    "leave_type": "sick",
+    "balance_days": 11.7
+  },
+  {
+    "leave_balance_id": 3006,
+    "employee_id": 2,
+    "leave_type": "casual",
+    "balance_days": 5.2
+  },
+  {
+    "leave_balance_id": 3007,
+    "employee_id": 3,
+    "leave_type": "PTO",
+    "balance_days": 4.9
+  },
+  {
+    "leave_balance_id": 3008,
+    "employee_id": 3,
+    "leave_type": "sick",
+    "balance_days": 7.6
+  },
+  {
+    "leave_balance_id": 3009,
+    "employee_id": 3,
+    "leave_type": "casual",
+    "balance_days": 16.5
+  },
+  {
+    "leave_balance_id": 3010,
+    "employee_id": 4,
+    "leave_type": "PTO",
+    "balance_days": 14.9
+  },
+  {
+    "leave_balance_id": 3011,
+    "employee_id": 4,
+    "leave_type": "sick",
+    "balance_days": 15.9
+  },
+  {
+    "leave_balance_id": 3012,
+    "employee_id": 4,
+    "leave_type": "casual",
+    "balance_days": 16.5
+  },
+  {
+    "leave_balance_id": 3013,
+    "employee_id": 5,
+    "leave_type": "PTO",
+    "balance_days": 6.2
+  },
+  {
+    "leave_balance_id": 3014,
+    "employee_id": 5,
+    "leave_type": "sick",
+    "balance_days": 6.7
+  },
+  {
+    "leave_balance_id": 3015,
+    "employee_id": 5,
+    "leave_type": "casual",
+    "balance_days": 4.5
+  },
+  {
+    "leave_balance_id": 3016,
+    "employee_id": 6,
+    "leave_type": "PTO",
+    "balance_days": 14.7
+  },
+  {
+    "leave_balance_id": 3017,
+    "employee_id": 6,
+    "leave_type": "sick",
+    "balance_days": 16.3
+  },
+  {
+    "leave_balance_id": 3018,
+    "employee_id": 6,
+    "leave_type": "casual",
+    "balance_days": 9.1
+  },
+  {
+    "leave_balance_id": 3019,
+    "employee_id": 7,
+    "leave_type": "PTO",
+    "balance_days": 12.3
+  },
+  {
+    "leave_balance_id": 3020,
+    "employee_id": 7,
+    "leave_type": "sick",
+    "balance_days": 5.3
+  },
+  {
+    "leave_balance_id": 3021,
+    "employee_id": 7,
+    "leave_type": "casual",
+    "balance_days": 16.9
+  },
+  {
+    "leave_balance_id": 3022,
+    "employee_id": 8,
+    "leave_type": "PTO",
+    "balance_days": 16.0
+  },
+  {
+    "leave_balance_id": 3023,
+    "employee_id": 8,
+    "leave_type": "sick",
+    "balance_days": 17.6
+  },
+  {
+    "leave_balance_id": 3024,
+    "employee_id": 8,
+    "leave_type": "casual",
+    "balance_days": 15.2
+  }
+]

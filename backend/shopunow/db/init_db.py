@@ -17,12 +17,24 @@ TABLE_COLUMNS = {
     "customers": ["customer_id", "name", "email"],
     "inventory": ["item_id", "name", "category", "price", "stock_qty"],
     "orders": ["order_id", "customer_id", "order_date", "status"],
-    "order_items": ["order_item_id", "order_id", "item_id", "quantity"],
+    "order_items": ["order_item_id", "order_id", "item_id", "quantity", "status"],
     "payments": ["payment_id", "order_id", "amount", "method", "payment_date", "status"],
+    "employees": ["employee_id", "name", "email", "department"],
+    "leave_balances": ["leave_balance_id", "employee_id", "leave_type", "balance_days"],
+    "it_tickets": ["ticket_id", "employee_id", "issue_type", "status", "created_date"],
 }
 
 # Parent tables must be seeded before the tables that reference them.
-SEED_ORDER = ["customers", "inventory", "orders", "order_items", "payments"]
+SEED_ORDER = [
+    "customers",
+    "inventory",
+    "orders",
+    "order_items",
+    "payments",
+    "employees",
+    "leave_balances",
+    "it_tickets",
+]
 
 
 def _load_rows(table: str) -> list[dict]:

@@ -9,19 +9,17 @@ Run (from the backend's venv, so `shopunow` is already installed/importable):
     streamlit run ../frontend/app.py
 """
 
-import json
 import sys
-import uuid
 from pathlib import Path
 
 BACKEND_DIR = Path(__file__).resolve().parent.parent / "backend"
 sys.path.insert(0, str(BACKEND_DIR))
 
 import streamlit as st
-from langchain_core.messages import HumanMessage
 
 from shopunow.agents.escalation_agent import format_escalation_confirmation
 from shopunow.data.departments import DEPARTMENTS
+from shopunow.db.schema import LOGIN_NAMES
 from shopunow.graph.build import build_graph
 from shopunow.main import fresh_turn_input, save_escalation
 from shopunow.memory.checkpointer import make_thread_id
@@ -38,21 +36,31 @@ def get_graph():
     return build_graph()
 
 
+LOGIN_OPTIONS = [f"{n['name']} ({n['kind']})" for n in LOGIN_NAMES]
+
+
+def _name_from_option(option: str) -> str:
+    return option.rsplit(" (", 1)[0]
+
+
 if "chat" not in st.session_state:
     st.session_state.chat = []  # list of (role, content) tuples, for redrawing the thread
     st.session_state.escalation_pending = False
     st.session_state.escalation_department = None  # may legitimately be None (unsupported query)
-    # Unique per browser session by default — the compiled graph (and its MemorySaver) is
-    # shared process-wide across every session via st.cache_resource, so two anonymous users
-    # both left on a fixed default like "guest" would collide on the same thread_id and see
-    # each other's conversation. Typing a real, shared id is still how one person picks up
-    # the same conversation again across visits/devices.
-    st.session_state.user_id = f"guest-{uuid.uuid4().hex[:8]}"
+    st.session_state.user_id = _name_from_option(LOGIN_OPTIONS[0])
 
 with st.sidebar:
     st.title("🛍️ ShopUNow")
     st.caption("Agentic support assistant — capstone demo")
-    st.session_state.user_id = st.text_input("Your user id", value=st.session_state.user_id)
+    chosen_option = st.selectbox("Logged in as", LOGIN_OPTIONS)
+    chosen_name = _name_from_option(chosen_option)
+    if chosen_name != st.session_state.user_id:
+        # switching identities mid-session starts a fresh display — each login has its own
+        # checkpointed conversation (thread_id), so the old messages belong to someone else
+        st.session_state.user_id = chosen_name
+        st.session_state.chat = []
+        st.session_state.escalation_pending = False
+        st.session_state.escalation_department = None
     st.divider()
     st.markdown("**Internal**")
     for d in DEPARTMENTS.values():
@@ -79,11 +87,9 @@ if user_text:
         st.markdown(user_text)
 
     graph = get_graph()
-    thread_id = make_thread_id(st.session_state.user_id, "default")
+    thread_id = make_thread_id(st.session_state.user_id)
     config = {"configurable": {"thread_id": thread_id}}
-    result = graph.invoke(
-        fresh_turn_input(user_text, st.session_state.user_id, "default"), config=config
-    )
+    result = graph.invoke(fresh_turn_input(user_text, st.session_state.user_id), config=config)
 
     response_text = result.get("final_response") or "(no response)"
     with st.chat_message("assistant"):

@@ -8,8 +8,7 @@ from typing_extensions import TypedDict
 class SupportState(TypedDict):
     messages: Annotated[list[AnyMessage], add_messages]
 
-    user_id: str
-    session_id: str
+    user_id: str  # one of the 5 login names — also the checkpointer's thread_id
 
     # None until sentiment_node runs; after that, always one of these exact values —
     # matches schemas.models.SentimentResult, which is what actually constrains the LLM's output.

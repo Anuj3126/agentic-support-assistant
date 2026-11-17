@@ -2,121 +2,121 @@
   {
     "customer_id": 1,
     "name": "Priya Sharma",
-    "email": "priya.sharma1@example.com"
+    "email": "priya.sharma@example.com"
   },
   {
     "customer_id": 2,
-    "name": "Rohan Iyer",
-    "email": "rohan.iyer2@example.com"
+    "name": "Dev Gupta",
+    "email": "dev.gupta@example.com"
   },
   {
     "customer_id": 3,
-    "name": "Rohan Reddy",
-    "email": "rohan.reddy3@example.com"
+    "name": "Neha Iyer",
+    "email": "neha.iyer@example.com"
   },
   {
     "customer_id": 4,
-    "name": "Dev Das",
-    "email": "dev.das4@example.com"
+    "name": "Rohan Iyer",
+    "email": "rohan.iyer4@example.com"
   },
   {
     "customer_id": 5,
-    "name": "Tara Khan",
-    "email": "tara.khan5@example.com"
+    "name": "Rohan Reddy",
+    "email": "rohan.reddy5@example.com"
   },
   {
     "customer_id": 6,
-    "name": "Asha Gupta",
-    "email": "asha.gupta6@example.com"
+    "name": "Dev Das",
+    "email": "dev.das6@example.com"
   },
   {
     "customer_id": 7,
-    "name": "Kabir Nair",
-    "email": "kabir.nair7@example.com"
+    "name": "Tara Khan",
+    "email": "tara.khan7@example.com"
   },
   {
     "customer_id": 8,
-    "name": "Arjun Gupta",
-    "email": "arjun.gupta8@example.com"
+    "name": "Asha Gupta",
+    "email": "asha.gupta8@example.com"
   },
   {
     "customer_id": 9,
-    "name": "Dev Nair",
-    "email": "dev.nair9@example.com"
+    "name": "Kabir Nair",
+    "email": "kabir.nair9@example.com"
   },
   {
     "customer_id": 10,
-    "name": "Ravi Mehta",
-    "email": "ravi.mehta10@example.com"
+    "name": "Arjun Gupta",
+    "email": "arjun.gupta10@example.com"
   },
   {
     "customer_id": 11,
-    "name": "Kabir Mehta",
-    "email": "kabir.mehta11@example.com"
+    "name": "Dev Nair",
+    "email": "dev.nair11@example.com"
   },
   {
     "customer_id": 12,
-    "name": "Neha Nair",
-    "email": "neha.nair12@example.com"
+    "name": "Ravi Mehta",
+    "email": "ravi.mehta12@example.com"
   },
   {
     "customer_id": 13,
-    "name": "Tara Khan",
-    "email": "tara.khan13@example.com"
+    "name": "Kabir Mehta",
+    "email": "kabir.mehta13@example.com"
   },
   {
     "customer_id": 14,
-    "name": "Asha Das",
-    "email": "asha.das14@example.com"
+    "name": "Neha Nair",
+    "email": "neha.nair14@example.com"
   },
   {
     "customer_id": 15,
-    "name": "Rohan Mehta",
-    "email": "rohan.mehta15@example.com"
+    "name": "Tara Khan",
+    "email": "tara.khan15@example.com"
   },
   {
     "customer_id": 16,
-    "name": "Kabir Mehta",
-    "email": "kabir.mehta16@example.com"
+    "name": "Asha Das",
+    "email": "asha.das16@example.com"
   },
   {
     "customer_id": 17,
-    "name": "Rohan Khan",
-    "email": "rohan.khan17@example.com"
+    "name": "Rohan Mehta",
+    "email": "rohan.mehta17@example.com"
   },
   {
     "customer_id": 18,
-    "name": "Tara Nair",
-    "email": "tara.nair18@example.com"
+    "name": "Kabir Mehta",
+    "email": "kabir.mehta18@example.com"
   },
   {
     "customer_id": 19,
-    "name": "Tara Iyer",
-    "email": "tara.iyer19@example.com"
+    "name": "Rohan Khan",
+    "email": "rohan.khan19@example.com"
   },
   {
     "customer_id": 20,
-    "name": "Ravi Sharma",
-    "email": "ravi.sharma20@example.com"
+    "name": "Tara Nair",
+    "email": "tara.nair20@example.com"
   },
   {
     "customer_id": 21,
-    "name": "Dev Khan",
-    "email": "dev.khan21@example.com"
+    "name": "Tara Iyer",
+    "email": "tara.iyer21@example.com"
   },
   {
     "customer_id": 22,
-    "name": "Ravi Iyer",
-    "email": "ravi.iyer22@example.com"
+    "name": "Ravi Sharma",
+    "email": "ravi.sharma22@example.com"
   },
   {
     "customer_id": 23,
-    "name": "Ravi Reddy",
-    "email": "ravi.reddy23@example.com"
+    "name": "Dev Khan",
+    "email": "dev.khan23@example.com"
   },
   {
     "customer_id": 24,
-    "name": "Arjun Das",
-    "email": "arjun.das24@example.com"
+    "name": "Ravi Iyer",
+    "email": "ravi.iyer24@example.com"
   }
 ]

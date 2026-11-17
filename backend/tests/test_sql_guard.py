@@ -59,7 +59,7 @@ def test_execute_safe_select_rejects_injection_before_touching_db(seeded_sqlite_
         sql_tool.execute_safe_select("SELECT * FROM orders; DROP TABLE orders;--", RETURNS_TABLES)
 
     # confirm the table really is untouched
-    rows = sql_tool.execute_safe_select("SELECT order_id FROM orders", RETURNS_TABLES)
+    rows = sql_tool.execute_safe_select("SELECT order_id FROM orders WHERE order_id = 1001", RETURNS_TABLES)
     assert len(rows) == 1
 
 

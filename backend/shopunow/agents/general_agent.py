@@ -60,6 +60,7 @@ answer the unrelated part at all."""
 
 
 HISTORY_WINDOW = 6  # recent prior messages to include, for a sensible follow-up question
+MAX_TOOL_ROUNDS = 4  # a backstop against a runaway loop, not an expected depth
 
 
 def general_node(state: SupportState) -> dict:
@@ -67,17 +68,22 @@ def general_node(state: SupportState) -> dict:
     query = state["messages"][-1].content
     llm = ChatGoogleGenerativeAI(model=settings.chat_model, google_api_key=settings.google_api_key)
     messages = [SystemMessage(SYSTEM_PROMPT), *history, HumanMessage(query)]
+    tool_llm = llm.bind_tools([web_search])
 
-    response = llm.bind_tools([web_search]).invoke(messages)
-    if not response.tool_calls:
-        return {"retrieved_docs": [], "used_web_search": False, "draft_answer": response.text}
+    # A bounded loop, not a single round — tools must stay bound on every call, not just the
+    # first, or a model that wants a second search after seeing the first result gets cut off
+    # into an empty response instead of being able to continue.
+    docs, used_web_search = [], False
+    response = tool_llm.invoke(messages)
+    rounds = 0
+    while response.tool_calls and rounds < MAX_TOOL_ROUNDS:
+        messages.append(response)
+        for call in response.tool_calls:
+            results = web_search.invoke(call["args"])
+            docs.extend(to_docs(results, department="general"))
+            used_web_search = True
+            messages.append(ToolMessage(content=json.dumps(results), tool_call_id=call["id"]))
+        response = tool_llm.invoke(messages)
+        rounds += 1
 
-    messages.append(response)
-    docs = []
-    for call in response.tool_calls:
-        results = web_search.invoke(call["args"])
-        docs.extend(to_docs(results, department="general"))
-        messages.append(ToolMessage(content=json.dumps(results), tool_call_id=call["id"]))
-
-    draft = llm.invoke(messages).text
-    return {"retrieved_docs": docs, "used_web_search": True, "draft_answer": draft}
+    return {"retrieved_docs": docs, "used_web_search": used_web_search, "draft_answer": response.text}
