@@ -58,5 +58,25 @@
     "id": "returns-11",
     "category": "returns",
     "doc": "Q: Can I return a gifted item without the original buyer?\nA: Yes, gifted items can be returned using the order ID shared by the gifter; refunds for gifted items are issued as store credit."
+  },
+  {
+    "id": "returns-12",
+    "category": "returns",
+    "doc": "Q: Who pays for return shipping?\nA: Return pickup is free for defective, damaged, or incorrectly shipped items. For change-of-mind returns, a small pickup fee may be deducted from your refund — this is shown before you confirm the return."
+  },
+  {
+    "id": "returns-13",
+    "category": "returns",
+    "doc": "Q: Are sale or clearance items eligible for return?\nA: Yes, unless an item is specifically marked \"Final Sale\" on the product page at the time of purchase — final sale items are not eligible for return or exchange."
+  },
+  {
+    "id": "returns-14",
+    "category": "returns",
+    "doc": "Q: What's the difference between a return and a warranty claim?\nA: Returns apply within the standard return window after delivery. Manufacturer warranty claims (for defects that appear later) are handled separately — contact support with your order ID and we'll guide you through the manufacturer's warranty process."
+  },
+  {
+    "id": "returns-15",
+    "category": "returns",
+    "doc": "Q: Can international orders be returned the same way as domestic ones?\nA: Yes, international orders follow the same return window and process, though pickup may take a few extra days depending on your courier region."
   }
 ]

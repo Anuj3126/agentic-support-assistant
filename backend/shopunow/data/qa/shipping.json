@@ -27,7 +27,7 @@
   {
     "id": "shipping-5",
     "category": "shipping",
-    "doc": "Q: Do you offer international shipping?\nA: Yes, we ship to select international destinations; availability is shown at checkout based on your delivery address."
+    "doc": "Q: Do you offer international shipping, and which countries do you cover?\nA: Yes — we currently ship to over 40 countries across North America, Europe, and Asia-Pacific, confirmed automatically at checkout based on your delivery address. We do not ship to extremely remote or restricted locations, such as polar research stations, active conflict zones, or countries under international shipping sanctions. If a destination isn't accepted at checkout, it's outside our current serviceable network rather than a temporary issue."
   },
   {
     "id": "shipping-6",
@@ -58,5 +58,25 @@
     "id": "shipping-11",
     "category": "shipping",
     "doc": "Q: How many delivery attempts are made before an order is returned?\nA: Our courier partners make up to 3 delivery attempts before returning the order to the warehouse."
+  },
+  {
+    "id": "shipping-12",
+    "category": "shipping",
+    "doc": "Q: Can I cancel my order before it ships?\nA: Yes, orders can be cancelled free of charge any time before they're marked \"shipped\" under \"My Orders > Order Details > Cancel Order.\" Once an order has shipped, you'll need to use our standard return process instead."
+  },
+  {
+    "id": "shipping-13",
+    "category": "shipping",
+    "doc": "Q: Do you deliver to PO boxes?\nA: We can deliver small parcels sent via standard postal courier to PO boxes, but larger items requiring a courier signature cannot be delivered to a PO box — this is flagged automatically at checkout if it applies to your order."
+  },
+  {
+    "id": "shipping-14",
+    "category": "shipping",
+    "doc": "Q: Will my order arrive in one package or multiple shipments?\nA: Orders with items from different warehouses may ship as separate shipments, each with its own tracking ID; all shipment statuses for one order appear together under \"My Orders > Track Order.\""
+  },
+  {
+    "id": "shipping-15",
+    "category": "shipping",
+    "doc": "Q: Are deliveries slower during sales or holiday periods?\nA: Yes, delivery can take 1-3 extra days during major sale events and public holidays due to higher courier volumes; any such delay is reflected directly in your tracking page's updated estimated delivery date."
   }
 ]

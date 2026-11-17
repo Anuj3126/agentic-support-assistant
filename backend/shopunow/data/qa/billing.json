@@ -58,5 +58,25 @@
     "id": "billing-11",
     "category": "billing",
     "doc": "Q: How do I set up an EMI payment option?\nA: EMI is available on select cards and order values above the EMI threshold; eligible options are shown automatically at checkout."
+  },
+  {
+    "id": "billing-12",
+    "category": "billing",
+    "doc": "Q: Do you accept ShopUNow gift cards or store credit as payment?\nA: Yes, gift cards and store credit can be applied at checkout under \"Apply Gift Card / Store Credit,\" and can be combined with one other payment method to cover any remaining balance."
+  },
+  {
+    "id": "billing-13",
+    "category": "billing",
+    "doc": "Q: Do you offer price matching if an item drops in price after I buy it?\nA: If the price drops within 7 days of your purchase, contact billing support with your order ID and we'll refund the difference as store credit."
+  },
+  {
+    "id": "billing-14",
+    "category": "billing",
+    "doc": "Q: Can I split a payment across two different cards or methods?\nA: A single order can only be paid with one payment method at checkout, except when combining a gift card or store credit with one other method."
+  },
+  {
+    "id": "billing-15",
+    "category": "billing",
+    "doc": "Q: How do I update the billing address on my account?\nA: Go to \"My Profile > Billing Address\" to update it. This only applies to future orders — invoices already generated keep the original billing address on file."
   }
 ]

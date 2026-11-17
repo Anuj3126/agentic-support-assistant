@@ -23,10 +23,20 @@ from shopunow.state import SupportState
 from shopunow.tools.web_search_tool import to_docs, web_search
 
 COMPANY_PROFILE = """ShopUNow is a retail company selling clothing, DIY (do it yourself)
-supplies, books, and toys, both online and through a small number of physical stores. Store
-hours are 9 AM-8 PM local time, seven days a week. Most products can be returned within 7 days
-of delivery (the Returns department handles specifics), and orders ship via regional courier
-partners (the Shipping department handles tracking and delays)."""
+supplies, books, and toys, both online and through a small network of physical stores across
+North America, Europe, and Asia-Pacific. Store hours are 9 AM-8 PM local time, seven days a
+week, at all physical locations.
+
+ShopUNow Rewards is our free loyalty program — customers earn points on every purchase,
+redeemable for discounts, and can join from "My Account > Rewards." Gift wrapping is available
+at checkout for a small fee, and digital gift cards (no expiry) can be bought and redeemed
+directly on the website. A general clothing size guide, in both metric and imperial units, is
+available on every clothing product page.
+
+Most products can be returned within 7 days of delivery (the Returns department handles
+specifics), and orders ship to over 40 countries via regional courier partners (the Shipping
+department handles tracking, delays, and coverage questions). ShopUNow runs seasonal sales
+during major shopping periods, and has a free mobile app (iOS and Android) with app-only deals."""
 
 SYSTEM_PROMPT = f"""{CONDUCT_POLICY}
 
