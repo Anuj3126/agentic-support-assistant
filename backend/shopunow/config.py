@@ -6,12 +6,11 @@ PACKAGE_DIR = Path(__file__).resolve().parent
 BACKEND_DIR = PACKAGE_DIR.parent
 DATA_DIR = PACKAGE_DIR / "data"
 CHROMA_DIR = PACKAGE_DIR / "chroma_db"
+BUSINESS_DB_PATH = PACKAGE_DIR / "shopunow.sqlite"
 
 
 class Settings(BaseSettings):
-    # An absolute path, not a bare ".env" — pydantic-settings otherwise resolves it relative
-    # to the current working directory, which breaks the moment something other than the CLI
-    # (e.g. the Streamlit frontend, run from the project root) imports this module.
+    # An absolute path, not a bare ".env" pydantic-settings otherwise resolves it relative
     model_config = SettingsConfigDict(env_file=str(BACKEND_DIR / ".env"), extra="ignore")
 
     google_api_key: str = ""

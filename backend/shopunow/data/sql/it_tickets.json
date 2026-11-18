@@ -1,0 +1,149 @@
+[
+  {
+    "ticket_id": 7001,
+    "employee_id": 2,
+    "issue_type": "vpn_access",
+    "status": "open",
+    "created_date": "2026-01-04"
+  },
+  {
+    "ticket_id": 7002,
+    "employee_id": 1,
+    "issue_type": "laptop_hardware",
+    "status": "resolved",
+    "created_date": "2026-07-30"
+  },
+  {
+    "ticket_id": 7003,
+    "employee_id": 4,
+    "issue_type": "software_install",
+    "status": "in_progress",
+    "created_date": "2026-02-25"
+  },
+  {
+    "ticket_id": 7004,
+    "employee_id": 7,
+    "issue_type": "vpn_access",
+    "status": "closed",
+    "created_date": "2026-04-24"
+  },
+  {
+    "ticket_id": 7005,
+    "employee_id": 4,
+    "issue_type": "password_reset",
+    "status": "resolved",
+    "created_date": "2026-06-06"
+  },
+  {
+    "ticket_id": 7006,
+    "employee_id": 4,
+    "issue_type": "laptop_hardware",
+    "status": "open",
+    "created_date": "2026-04-09"
+  },
+  {
+    "ticket_id": 7007,
+    "employee_id": 7,
+    "issue_type": "software_install",
+    "status": "resolved",
+    "created_date": "2026-02-05"
+  },
+  {
+    "ticket_id": 7008,
+    "employee_id": 5,
+    "issue_type": "software_install",
+    "status": "closed",
+    "created_date": "2026-10-02"
+  },
+  {
+    "ticket_id": 7009,
+    "employee_id": 6,
+    "issue_type": "vpn_access",
+    "status": "open",
+    "created_date": "2026-05-14"
+  },
+  {
+    "ticket_id": 7010,
+    "employee_id": 3,
+    "issue_type": "network",
+    "status": "resolved",
+    "created_date": "2026-01-20"
+  },
+  {
+    "ticket_id": 7011,
+    "employee_id": 2,
+    "issue_type": "network",
+    "status": "closed",
+    "created_date": "2026-06-26"
+  },
+  {
+    "ticket_id": 7012,
+    "employee_id": 6,
+    "issue_type": "password_reset",
+    "status": "open",
+    "created_date": "2026-07-17"
+  },
+  {
+    "ticket_id": 7013,
+    "employee_id": 4,
+    "issue_type": "software_install",
+    "status": "open",
+    "created_date": "2026-08-12"
+  },
+  {
+    "ticket_id": 7014,
+    "employee_id": 1,
+    "issue_type": "network",
+    "status": "in_progress",
+    "created_date": "2026-07-06"
+  },
+  {
+    "ticket_id": 7015,
+    "employee_id": 7,
+    "issue_type": "vpn_access",
+    "status": "resolved",
+    "created_date": "2026-06-10"
+  },
+  {
+    "ticket_id": 7016,
+    "employee_id": 2,
+    "issue_type": "software_install",
+    "status": "resolved",
+    "created_date": "2026-07-29"
+  },
+  {
+    "ticket_id": 7017,
+    "employee_id": 6,
+    "issue_type": "password_reset",
+    "status": "resolved",
+    "created_date": "2026-10-11"
+  },
+  {
+    "ticket_id": 7018,
+    "employee_id": 3,
+    "issue_type": "laptop_hardware",
+    "status": "closed",
+    "created_date": "2026-07-14"
+  },
+  {
+    "ticket_id": 7019,
+    "employee_id": 3,
+    "issue_type": "network",
+    "status": "resolved",
+    "created_date": "2026-07-27"
+  },
+  {
+    "ticket_id": 7020,
+    "employee_id": 1,
+    "issue_type": "software_install",
+    "status": "resolved",
+    "created_date": "2026-04-18"
+  },
+  {
+    "ticket_id": 7021,
+    "employee_id": 7,
+    "issue_type": "network",
+    "status": "resolved",
+    "created_date": "2026-08-27"
+  }
+]

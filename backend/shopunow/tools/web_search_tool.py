@@ -1,7 +1,9 @@
 """Web search, used as a fallback whenever the internal knowledge base has nothing relevant.
 
-Requires TAVILY_API_KEY. If it's not configured, `web_search` returns an empty list instead
-of raising, so callers can fall through to "no relevant documents found" rather than crashing.
+Requires TAVILY_API_KEY. If it's not configured, or the live search call itself fails for any
+reason (network, SSL, rate limit, API error), `web_search` returns an empty list instead of
+raising, so callers can fall through to "no relevant documents found" rather than crashing
+the whole turn.
 """
 
 from langchain_core.tools import tool
@@ -17,8 +19,11 @@ def web_search(query: str) -> list[dict]:
         return []
     from tavily import TavilyClient
 
-    client = TavilyClient(api_key=settings.tavily_api_key)
-    response = client.search(query, max_results=3)
+    try:
+        client = TavilyClient(api_key=settings.tavily_api_key)
+        response = client.search(query, max_results=3)
+    except Exception:
+        return []
     return [
         {"title": r.get("title", ""), "url": r.get("url", ""), "content": r.get("content", "")}
         for r in response.get("results", [])

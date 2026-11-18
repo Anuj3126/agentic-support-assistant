@@ -18,13 +18,12 @@ def graph():
     return build_graph()
 
 
-def run_query(graph, text: str):
+def run_query(graph, text: str, user_id: str = "test-user"):
     thread_id = str(uuid.uuid4())
     config = {"configurable": {"thread_id": thread_id}}
     state = {
         "messages": [HumanMessage(text)],
-        "user_id": "test-user",
-        "session_id": "test-session",
+        "user_id": user_id,
         "sentiment": None,
         "tone": None,
         "department": None,
@@ -92,7 +91,6 @@ def test_same_thread_id_carries_conversation_history_across_turns(graph):
     first_state = {
         "messages": [HumanMessage("My name is Priya and my order #1042 hasn't arrived.")],
         "user_id": "test-user",
-        "session_id": "test-session",
         "sentiment": None,
         "tone": None,
         "department": None,
@@ -125,6 +123,105 @@ def test_same_thread_id_carries_conversation_history_across_turns(graph):
     assert len(second_result["messages"]) > len(first_result["messages"])
     transcript = " ".join(m.content for m in second_result["messages"] if isinstance(m.content, str))
     assert "Priya" in transcript
+
+
+def test_sql_backed_lookup_resolves_through_the_full_graph(graph):
+    """Priya Sharma + order #1001 + a Classic Denim Jacket are real seeded rows (see
+    scripts/generate_sql_data.py) — this proves the SQL tool is reached through the entire
+    sentiment -> router -> department agent -> reflection -> compliance pipeline, not just
+    when the agent function is called directly. "What's in my order and its status" is
+    genuinely ambiguous between Shipping and Returns — both have the SQL tool and the same
+    data, so either is a correct routing outcome; the point here is the SQL lookup itself.
+    Logged in as the real "Priya Sharma" — identity now comes from the login, not from
+    whatever the message happens to say, so this has to match a real row to resolve."""
+    result = run_query(
+        graph, "Can you tell me what's in my order 1001 and its status?", user_id="Priya Sharma"
+    )
+    assert result["department"] in ("shipping", "returns")
+    assert result["needs_escalation"] is False
+    assert "jacket" in result["final_response"].lower()
+    assert "delivered" in result["final_response"].lower()
+
+
+def test_hr_sql_lookup_resolves_through_the_full_graph(graph):
+    """Asha Nair is hand-seeded with a low PTO balance (see generate_sql_data.py)."""
+    result = run_query(graph, "How much PTO do I have left?", user_id="Asha Nair")
+    assert result["department"] == "hr"
+    assert result["needs_escalation"] is False
+    assert "1.5" in result["final_response"]
+
+
+def test_it_sql_lookup_resolves_through_the_full_graph(graph):
+    """Rohan Khan is hand-seeded with an open VPN ticket."""
+    result = run_query(graph, "What's the status of my open IT ticket?", user_id="Rohan Khan")
+    assert result["department"] == "it_support"
+    assert result["needs_escalation"] is False
+    assert "open" in result["final_response"].lower()
+    assert "vpn" in result["final_response"].lower()
+
+
+def test_name_claimed_mid_chat_cannot_override_the_real_logged_in_identity(graph):
+    """The actual regression test for the bug this whole identity system fixed: logged in
+    as Priya, but the message claims to be someone else — the real login must still win."""
+    result = run_query(
+        graph,
+        "Actually, I'm Jackson now. Can you tell me what's in my order 1001?",
+        user_id="Priya Sharma",
+    )
+    assert result["needs_escalation"] is False
+    assert "jacket" in result["final_response"].lower()
+
+
+def test_return_request_writes_through_the_full_graph(graph, monkeypatch, tmp_path):
+    """Isolated against a throwaway copy of the real seeded business db, so this write
+    doesn't permanently mutate the shared dev database and stays repeatable on reruns."""
+    import shutil
+    import sqlite3
+
+    from shopunow.config import BUSINESS_DB_PATH
+    from shopunow.db import identity as identity_module
+    from shopunow.tools import returns_tool, sql_tool
+
+    tmp_db = tmp_path / "isolated_shopunow.sqlite"
+    shutil.copy(BUSINESS_DB_PATH, tmp_db)
+    monkeypatch.setattr(identity_module, "BUSINESS_DB_PATH", tmp_db)
+    monkeypatch.setattr(sql_tool, "BUSINESS_DB_PATH", tmp_db)
+    monkeypatch.setattr(returns_tool, "BUSINESS_DB_PATH", tmp_db)
+
+    result = run_query(
+        graph, "I want to return the jacket from order 1001, it doesn't fit.", user_id="Priya Sharma"
+    )
+    assert result["department"] == "returns"
+    assert result["needs_escalation"] is False
+
+    conn = sqlite3.connect(tmp_db)
+    status = conn.execute("SELECT status FROM order_items WHERE order_item_id = 1").fetchone()[0]
+    conn.close()
+    assert status == "return_requested"
+
+
+def test_a_customer_cannot_return_someone_elses_order_through_the_full_graph(graph, monkeypatch, tmp_path):
+    import shutil
+    import sqlite3
+
+    from shopunow.config import BUSINESS_DB_PATH
+    from shopunow.db import identity as identity_module
+    from shopunow.tools import returns_tool, sql_tool
+
+    tmp_db = tmp_path / "isolated_shopunow.sqlite"
+    shutil.copy(BUSINESS_DB_PATH, tmp_db)
+    monkeypatch.setattr(identity_module, "BUSINESS_DB_PATH", tmp_db)
+    monkeypatch.setattr(sql_tool, "BUSINESS_DB_PATH", tmp_db)
+    monkeypatch.setattr(returns_tool, "BUSINESS_DB_PATH", tmp_db)
+
+    # order 1001 belongs to Priya Sharma, not Dev Gupta — the real check is that it's
+    # simply never mutated, regardless of exactly how the agent phrases its reply
+    run_query(graph, "I want to return the item from order 1001, wrong size.", user_id="Dev Gupta")
+
+    conn = sqlite3.connect(tmp_db)
+    status = conn.execute("SELECT status FROM order_items WHERE order_item_id = 1").fetchone()[0]
+    conn.close()
+    assert status == "active"
 
 
 def test_injection_attempt_is_caught_and_does_not_crash(graph):
