@@ -10,9 +10,7 @@ BUSINESS_DB_PATH = PACKAGE_DIR / "shopunow.sqlite"
 
 
 class Settings(BaseSettings):
-    # An absolute path, not a bare ".env" — pydantic-settings otherwise resolves it relative
-    # to the current working directory, which breaks the moment something other than the CLI
-    # (e.g. the Streamlit frontend, run from the project root) imports this module.
+    # An absolute path, not a bare ".env" pydantic-settings otherwise resolves it relative
     model_config = SettingsConfigDict(env_file=str(BACKEND_DIR / ".env"), extra="ignore")
 
     google_api_key: str = ""
